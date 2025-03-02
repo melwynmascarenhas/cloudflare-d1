@@ -41,7 +41,7 @@ export default {
 
 				const query = `
           INSERT INTO Stories (email, prompt, ai_response, model, temperature, max_tokens, created_at)
-VALUES (?, ?, ?, ?, ?, ?, datetime('now'))
+		  VALUES (?, ?, ?, ?, ?, ?, datetime('now'))
         `;
 
 				await env.DB.prepare(query).bind(email, prompt, ai_response, model, temperature, max_tokens).run();
